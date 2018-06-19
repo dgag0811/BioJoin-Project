@@ -1,0 +1,33 @@
+create table Gene (
+  tax_id integer,
+  gene_id integer,
+  symbol varchar(30) primary key,
+  synonym varchar(50),
+  chromo varchar(20),
+  map_loc varchar(50),
+  description varchar(300),
+  type_gene varchar(30),
+  modifier integer
+);    
+
+create table SNP (
+  snp_id integer primary key,
+  chromo varchar(20),
+  pos integer,
+  gene_affected varchar(30),
+  anc_allele varchar(5),
+  monor_allele varchar(5)
+  
+);
+
+create table Disease (
+  disease_id integer primary key,
+  name varchar(200)
+);
+
+create table Gene_Disease (
+  gene_symbol varchar(30),
+  disease_id integer
+
+);
+
